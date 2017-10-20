@@ -1,6 +1,6 @@
 Temperate class created in Java TASKS
 
-1) - due 10/19
+1) - due 10/19 - QL
 {Four constructors:
 - one to specify both parameters (degrees, type)
 - one to specify just the degrees (defaults to type Celsius)
@@ -12,7 +12,7 @@ Implement a readInput() method to prompt user for degrees and type and then read
 
 }
 
-2) - due 10/23
+2) - due 10/23 -LZ
 {Three "write" methods (these DO NOT change values of original instance data):
 - one to display both parameter values (use this for debugging) - writeOutput()
 - one to display temperature in degrees C (even if value is Fahrenheit)- writeC()
@@ -26,7 +26,7 @@ Two accessor methods to get (return) temperature (these DO NOT change values of 
     returns Fahrenheit value (no matter what type current temperature has) - getF() 
 }
 
-3) - due 10/23
+3) - due 10/23 - KL
 {Three mutator methods to set (update) the parameters:
 - one to set the degrees value
 - one to set the type value
