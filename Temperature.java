@@ -49,7 +49,7 @@ public class Temperature {
     System.out.println("Enter 'F' (or 'f') for Fahrenheit or 'C' (or 'c') for Celsius:");
     input.next();
     //convert user input to a char
-    type = scan.nextLine().toUpperCase().charAt(0);
+    type = input.nextLine().toUpperCase().charAt(0);
     }   
         
 }
