@@ -1,10 +1,11 @@
 /**
-    *This is the tempature class
-    *with 4 constructors and a
-    *readInput method that reads users input
+    * Temperature class represents a temperature
+    * class contains 4 counstructors and private function convertTemp
+    * methods include: readInput, writeOutput, writeC, writeF, 
+    *    getC, getF, set, to_String, equals 
     *@author(s) Chien Lin, Lena Zheng, Qian dong Li
-    *@version 1.0
-    *@since 2017-10-22
+    *@version 1.3
+    *@since 2017-10-24
 */
 
 import java.util.Scanner;
@@ -13,7 +14,7 @@ import java.util.Scanner;
 public class Temperature {
     double degree;
     char type;
-    
+
     //creating a scanner for user input
     Scanner input = new Scanner(System.in);
      
@@ -39,7 +40,7 @@ public class Temperature {
     public Temperature(){
         type ='C';
         degree= 0;
-    }  
+    }
 
     //prompt user for degrees and type and then reads the values
     public void readInput(){
@@ -97,4 +98,40 @@ public class Temperature {
     public double getF(){
         return convertTemp(degree,type,'F');
     }
+
+    
+        // set overload method
+    public void set(double p_deg){
+        degree = p_deg;  
+    }
+  
+    public void set(char p_type){
+        type = p_type;  
+    }
+
+    public void set(double p_deg, char p_type){
+        degree = p_deg;  
+        type = p_type;  
+    }
+
+    //comparison method.
+    public boolean equals(Temperature otherTemp){
+        Boolean return_val = false;
+        if(getC() == otherTemp.getC()){
+            return_val = true;
+        }
+        return return_val;
+    }
+
+    public String toString(){
+        String result = "Temperature is set to ";
+
+        if (Character.toUpperCase(type) == 'C'){
+            result = result + degree + " " + type + " or " + getF() + " F.";
+        } else {result = result + degree + " " + type + " or " + getC() + " C."; 
+        }
+    
+        return result;
+    };
+
 }

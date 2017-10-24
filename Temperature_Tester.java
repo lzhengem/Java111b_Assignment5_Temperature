@@ -35,7 +35,7 @@ public class Temperature_Tester {
     System.out.println(myTemp4.getF());
     
     // testing for part 3.
-/*    System.out.println("\n--------------------Testing part 3-------------------");
+    System.out.println("\n--------------------Testing part 3-------------------");
     myTemp3.writeOutput();
      System.out.println("Testing set overload method");
     myTemp3.set(20.0);
@@ -55,7 +55,7 @@ public class Temperature_Tester {
         myTemp3.writeOutput();
         System.out.println("The two temperatures are equal is " + myTemp4.equals(myTemp3));
         
-        System.out.println("\n" + myTemp5.toString()); */
+        System.out.println("\n" + myTemp4.toString()); 
     
     }
 
