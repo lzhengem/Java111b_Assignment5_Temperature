@@ -26,7 +26,7 @@ Two accessor methods to get (return) temperature (these DO NOT change values of 
     returns Fahrenheit value (no matter what type current temperature has) - getF() 
 }
 
-3) - due 10/23 - KL
+3) - due 10/23 - KL DONE please test
 {Three mutator methods to set (update) the parameters:
 - one to set the degrees value
 - one to set the type value
