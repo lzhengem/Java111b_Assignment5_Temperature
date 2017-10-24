@@ -18,20 +18,20 @@ public class Temperature {
     Scanner input = new Scanner(System.in);
      
     // to specify both parameters (degrees, type)
-    public Temperature(double degree, char type){
-        degree = degree;
-        type = type;
+    public Temperature(double p_degree, char p_type){
+        degree = p_degree;
+        type = p_type;
     }
 
     //to specify just the degrees (defaults to type Celsius)
-    public Temperature(double degree){
-        degree = degree;
+    public Temperature(double p_degree){
+        degree = p_degree;
         type = 'C';
     }
 
     //to specify just the type (defaults to 0.0 for the degrees value)
-    public Temperature(char type){
-        type = type;
+    public Temperature(char p_type){
+        type = p_type;
         degree = 0.0;
     }
 
