@@ -1,10 +1,11 @@
 /**
-    *This is the tempature class
-    *with 4 constructors and a
-    *readInput method that reads users input
+    * Temperature class represents a temperature
+    * class contains 4 counstructors and private function convertTemp
+    * methods include: readInput, writeOutput, writeC, writeF, 
+    *    getC, getF, set, to_String, equals 
     *@author(s) Chien Lin, Lena Zheng, Qian dong Li
-    *@version 1.0
-    *@since 2017-10-22
+    *@version 1.3
+    *@since 2017-10-24
 */
 
 import java.util.Scanner;
@@ -14,26 +15,27 @@ import java.text.DecimalFormat;
 public class Temperature {
     double degree;
     char type;
-    DecimalFormat oneDecimal = new DecimalFormat("###,##0.0");
-    
+
+
     //creating a scanner for user input
     Scanner input = new Scanner(System.in);
-     
+    DecimalFormat oneDecimal = new DecimalFormat("###,##0.0");
+    
     // to specify both parameters (degrees, type)
-    public Temperature(double degree, char type){
-        degree = degree;
-        type = type;
+    public Temperature(double p_degree, char p_type){
+        degree = p_degree;
+        type = p_type;
     }
 
     //to specify just the degrees (defaults to type Celsius)
-    public Temperature(double degree){
-        degree = degree;
+    public Temperature(double p_degree){
+        degree = p_degree;
         type = 'C';
     }
 
     //to specify just the type (defaults to 0.0 for the degrees value)
-    public Temperature(char type){
-        type = type;
+    public Temperature(char p_type){
+        type = p_type;
         degree = 0.0;
     }
 
@@ -41,7 +43,7 @@ public class Temperature {
     public Temperature(){
         type ='C';
         degree= 0;
-    }  
+    }
 
     //prompt user for degrees and type and then reads the values
     public void readInput(){
@@ -99,4 +101,40 @@ public class Temperature {
     public double getF(){
         return Math.round(convertTemp(degree,type,'F')*10)/10.0;
     }
+
+    
+        // set overload method
+    public void set(double p_deg){
+        degree = p_deg;  
+    }
+  
+    public void set(char p_type){
+        type = p_type;  
+    }
+
+    public void set(double p_deg, char p_type){
+        degree = p_deg;  
+        type = p_type;  
+    }
+
+    //comparison method.
+    public boolean equals(Temperature otherTemp){
+        Boolean return_val = false;
+        if(getC() == otherTemp.getC()){
+            return_val = true;
+        }
+        return return_val;
+    }
+
+    public String toString(){
+        String result = "Temperature is set to ";
+
+        if (Character.toUpperCase(type) == 'C'){
+            result = result + degree + " " + type + " or " + getF() + " F.";
+        } else {result = result + degree + " " + type + " or " + getC() + " C."; 
+        }
+    
+        return result;
+    };
+
 }
