@@ -82,21 +82,21 @@ public class Temperature {
 
     //writes the temperature in C
     public void writeC(){
-        System.out.println("Temperature = " + convertTemp(degree,type,'C') + " degrees C.");        
+        System.out.println("Temperature = " + oneDecimal.format(convertTemp(degree,type,'C')) + " degrees C.");        
     }
 
     // writes the temperature in F
     public void writeF(){
-        System.out.println("Temperature = " + convertTemp(degree,type,'F') + " degrees F.");        
+        System.out.println("Temperature = " + oneDecimal.format(convertTemp(degree,type,'F')) + " degrees F.");        
     }
 
     //returns the temperature in C
     public double getC(){
-        return convertTemp(degree,type,'C');
+        return Math.round(convertTemp(degree,type,'C')*10)/10.0;
     }
 
     //returns the temperature in F
     public double getF(){
-        return convertTemp(degree,type,'F');
+        return Math.round(convertTemp(degree,type,'F')*10)/10.0;
     }
 }
