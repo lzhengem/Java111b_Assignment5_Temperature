@@ -8,11 +8,13 @@
 */
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 
 public class Temperature {
     double degree;
     char type;
+    DecimalFormat oneDecimal = new DecimalFormat("###,##0.0");
     
     //creating a scanner for user input
     Scanner input = new Scanner(System.in);
@@ -75,7 +77,7 @@ public class Temperature {
 
     //print out parameter degreeand type, for debugging
     public void writeOutput(){
-        System.out.println("Temperature = " + degree + " degrees "+ type + ".");
+        System.out.println("Temperature = " + oneDecimal.format(degree) + " degrees "+ type + ".");
     }
 
     //writes the temperature in C
