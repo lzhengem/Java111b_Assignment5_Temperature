@@ -119,7 +119,7 @@ public class Temperature {
 
     //comparison method.
     public boolean equals(Temperature otherTemp){
-        Boolean return_val = false;
+        boolean return_val = false;
         if(getC() == otherTemp.getC()){
             return_val = true;
         }
