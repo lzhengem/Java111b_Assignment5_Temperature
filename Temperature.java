@@ -84,12 +84,12 @@ public class Temperature {
 
     //writes the temperature in C
     public void writeC(){
-        System.out.println("Temperature = " + oneDecimal.format(convertTemp(degree,type,'C')) + " degrees C.");        
+        System.out.println("Temperature = " + oneDecimal.format(convertTemp(degree,type,'C')) + " degrees Celsius.");        
     }
 
     // writes the temperature in F
     public void writeF(){
-        System.out.println("Temperature = " + oneDecimal.format(convertTemp(degree,type,'F')) + " degrees F.");        
+        System.out.println("Temperature = " + oneDecimal.format(convertTemp(degree,type,'F')) + " degrees Fahrenheit.");        
     }
 
     //returns the temperature in C
