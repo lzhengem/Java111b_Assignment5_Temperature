@@ -103,7 +103,7 @@ public class Temperature {
     }
 
     
-        // set overload method
+    // set overload method
     public void set(double p_deg){
         degree = p_deg;  
     }
