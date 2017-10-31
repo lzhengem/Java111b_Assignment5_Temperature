@@ -54,6 +54,12 @@ public class Temperature {
         System.out.println("Enter 'F' (or 'f') for Fahrenheit or 'C' (or 'c') for Celsius:");
         //convert user input to a char
         type = input.next().toUpperCase().charAt(0);
+        //Validates to make sure user inputs units in "F" or "C" 
+        while(type!='C'&&type!='F'){
+            System.out.println("invalid unit");
+            System.out.println("Enter 'F' (or 'f') for Fahrenheit or 'C' (or 'c') for Celsius:");
+            type = input.next().toUpperCase().charAt(0);
+        }       
     }
 
     // conversion function to convert degree parameter between Farenheit and Celcius
@@ -119,7 +125,7 @@ public class Temperature {
 
     //comparison method.
     public boolean equals(Temperature otherTemp){
-        Boolean return_val = false;
+        boolean return_val = false;
         if(getC() == otherTemp.getC()){
             return_val = true;
         }
