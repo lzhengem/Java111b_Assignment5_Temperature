@@ -54,7 +54,7 @@ public class Temperature {
         System.out.println("Enter 'F' (or 'f') for Fahrenheit or 'C' (or 'c') for Celsius:");
         //convert user input to a char
         type = input.next().toUpperCase().charAt(0);
-        //Prompts users to input units: 'f', or 'c' 
+        //Validates to make sure user inputs units in "F" or "C" 
         while(type!='C'&&type!='F'){
             System.out.println("invalid unit");
             System.out.println("Enter 'F' (or 'f') for Fahrenheit or 'C' (or 'c') for Celsius:");
